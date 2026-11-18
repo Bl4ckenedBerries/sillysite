@@ -1,107 +1,413 @@
-/* CSS Reset usando o caracter coringa (*) */
+
+/* ==========================================
+   BL4CKENEDBERRIES
+   Main stylesheet
+========================================== */
+
+
+/* ==========================================
+   1. RESET
+========================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --cor-marrom-escuro:#4e352e;
+
+
+/* ==========================================
+   2. COLOR PALETTE
+========================================== */
+
+:root {
+    --cor-marrom-escuro: #4e352e;
     --cor-marrom-medio: #b07d52;
+
     --cor-fundo-pagina: #f5efe6;
-    --cor-branca:#ffff;
-    --cor-fundo-secao:#ffff;
+    --cor-fundo-secao: #fffaf5;
+    --cor-branca: #ffffff;
+
+    --cor-rosa: #e79db6;
+    --cor-rosa-claro: #f6c0d0;
+    --cor-rosa-hover: #e68daa;
+    --cor-rosa-borda: #fbaea4;
+
+    --cor-texto: #963d5a;
+
     --cor-sombra: rgba(75, 25, 25, 0.2);
-    --cor-fundo-dica: #fff8e1;
-    --cor-borda-dica: #ecb0b0;
-    --cor-borda-tabela: #c0d3c4;
 }
 
+
+/* ==========================================
+   3. BODY
+========================================== */
+
 body {
-    background-image: url("backgroundimg.jpg");
+    background-image: url("imagens/backgroundimg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+
     min-height: 100vh;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--cor-texto);
 }
+
+
+/* ==========================================
+   4. HEADER
+========================================== */
+
 header {
-    width: 100%;
+    width: 1100px;
+    max-width: 95%;
+
+    margin: 20px auto 0;
+    padding: 15px;
+
+    text-align: center;
+
+    background-color: var(--cor-fundo-pagina);
+
+    border: 5px solid var(--cor-rosa-borda);
+    border-radius: 15px;
 }
 
 header img {
     width: 744px;
-    height: 252px;
+    max-width: 100%;
+    height: auto;
+
     display: block;
     margin: 0 auto;
 }
+
+header h1,
+header p {
+    animation: surgir 0.9s ease-out both;
+}
+
+header p {
+    animation-delay: 0.3s;
+}
+
+
+/* ==========================================
+   5. MAIN
+========================================== */
+
 main {
-    width: 900px;
-    margin: 20px auto 0;
+    width: 1100px;
+    max-width: 95%;
+
+    margin: 20px auto;
+    padding: 25px;
+
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     background-color: var(--cor-fundo-pagina);
-    color: #963d5a;
-    padding: 15px;
+
+    border: 5px solid var(--cor-rosa-borda);
     border-radius: 15px;
 }
+
+
+/* ==========================================
+   6. TEXTS
+========================================== */
+
+h1,
+h2,
+h3 {
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.texto {
+    text-align: left;
+
+    margin: 20px 0;
+}
+
+.texto h2 {
+    margin-top: 25px;
+}
+
+
+/* ==========================================
+   7. NAVIGATION
+========================================== */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 30px 15px;
+    padding: 15px;
+
+    background-color: var(--cor-rosa);
+
+    border-radius: 50px;
+}
+
+nav a {
+    color: #fff8e1;
+    text-decoration: none;
+
+    padding: 10px 16px;
+
+    border-radius: 10px;
+
+    font-size: larger;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--cor-rosa-hover);
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   8. FLEX LAYOUT
+========================================== */
+
 .merow {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
+
     gap: 30px;
+
     width: 100%;
     padding: 20px;
 }
+
+
+/* ==========================================
+   9. PROFILE
+========================================== */
 
 .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     flex-shrink: 0;
+
     width: 200px;
 }
 
 .widow {
     width: 200px;
     height: 200px;
+
     object-fit: cover;
+
     display: block;
 }
+
+
+/* ==========================================
+   10. BLINKIES
+========================================== */
 
 .blinkies {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     gap: 5px;
+
     width: 100%;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .blinkies img {
     display: block;
+
     width: 100%;
     height: auto;
 }
 
-.texto {
+
+/* ==========================================
+   11. BUTTON WALL
+========================================== */
+
+.button-wall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
     flex: 1;
     min-width: 0;
-    text-align: left;
+
+    gap: 10px;
 }
+
+.button-wall img {
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   12. HOVER EFFECTS
+========================================== */
+
+.blinkies img,
+.button-wall img,
+.blinkie-gallery img {
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+
+    cursor: pointer;
+}
+
+.blinkies img:hover,
+.button-wall img:hover,
+.blinkie-gallery img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.15) saturate(1.3);
+}
+
+
+/* ==========================================
+   13. FOOTER
+========================================== */
+
+footer {
+    width: 100%;
+}
+
 footer img {
     width: 744px;
-    height: 252px;
+    max-width: 100%;
+    height: auto;
+
     display: block;
     margin: 0 auto;
 }
-.boloburro{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+
+
+/* ==========================================
+   14. SMALL IMAGES
+========================================== */
+
+.outrodia {
+    width: 20px;
+    height: 20px;
+
     display: block;
 }
-.sugartomypop{
-     width: 200px;
-    height: 200px;
-    object-fit: cover;
+
+
+/* ==========================================
+   15. ANIMATIONS
+========================================== */
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   16. RESPONSIVENESS
+========================================== */
+
+@media (max-width: 800px) {
+
+    header,
+    main {
+        width: 95%;
+        max-width: 95%;
+    }
+
+    .merow {
+        justify-content: center;
+    }
+
+    .profile {
+        width: 180px;
+    }
+
+    .widow {
+        width: 180px;
+        height: 180px;
+    }
+
+    nav {
+        margin: 20px 0;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    main {
+        padding: 12px;
+    }
+
+    nav {
+        border-radius: 20px;
+    }
+
+    nav a {
+        font-size: medium;
+    }
+
+    .merow {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .profile {
+        width: 150px;
+    }
+
+    .widow {
+        width: 150px;
+        height: 150px;
+    }
+
+    .button-wall {
+        gap: 8px;
+    }
+}
+
+/* DIVIDERS */
+
+.divider {
     display: block;
+
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+
+    margin: 25px auto;
 }

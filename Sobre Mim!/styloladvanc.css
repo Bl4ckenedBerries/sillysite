@@ -1,0 +1,240 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css");
+.topo-animado h1, .topo-animado p{
+    animation: surgir 0.9s ease-out both;
+}
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    } to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+.topo-animado p {
+    animation-delay: 0.3s;
+}
+header {
+        width: 1100px;
+    margin: 20px auto 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--cor-fundo-pagina);
+    color: #963d5a;
+    padding: 15px;
+    border-radius: 15px;
+    border: 5px solid #FBAEA4;
+}
+
+/* =========================
+   BUTTON WALL
+========================= */
+
+.button-wall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.button-wall img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =========================
+   FOOD TABLE
+========================= */
+
+.food-section {
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.food-section h2 {
+    margin-bottom: 20px;
+}
+
+.food-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fffaf5;
+    color: #963d5a;
+    border: 3px solid #fbaea4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.food-table th,
+.food-table td {
+    padding: 12px;
+    border: 2px solid #f5c4c4;
+    text-align: center;
+}
+
+.food-table th {
+    background-color: #f6c0d0;
+    color: #79334b;
+}
+
+.food-table tr:nth-child(even) {
+    background-color: #fff0f4;
+}
+
+.food-table tr:hover {
+    background-color: #ffe0e9;
+    transition: 0.2s;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-section {
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #fff8f5;
+    border: 3px solid #fbaea4;
+    border-radius: 15px;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+.contact-form label {
+    color: #963d5a;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #f5c4c4;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #79334b;
+    font-family: inherit;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #e78eac;
+    box-shadow: 0 0 8px rgba(231, 157, 182, 0.4);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 12px;
+    border: 2px solid #e78eac;
+    border-radius: 10px;
+    background-color: #e79db6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #c96e92;
+    color: #fff8e1;
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   BLINKIE GALLERY
+========================= */
+
+.blinkie-gallery-section {
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.blinkie-gallery-section h2 {
+    margin-bottom: 10px;
+}
+
+.blinkie-gallery-section p {
+    margin-bottom: 20px;
+}
+
+.blinkie-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    background-color: #fff8f5;
+    border: 3px dashed #fbaea4;
+    border-radius: 15px;
+}
+
+.blinkie-gallery img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+/* =========================
+   RESPONSIVE GALLERY
+========================= */
+
+@media (max-width: 800px) {
+    .blinkie-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .food-table th,
+    .food-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .blinkie-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food-table th,
+    .food-table td {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+/* DIVIDERS */
+
+.divider {
+    display: block;
+
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+
+    margin: 25px auto;
+}
+
