@@ -238,3 +238,486 @@ header {
     margin: 25px auto;
 }
 
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* PALETA */
+
+:root {
+
+    --fundo: #f8f3fc;
+    --secao: #ffffff;
+
+    --roxo: #73558f;
+    --roxo-claro: #c7a9df;
+
+    --rosa: #e7b9d2;
+
+    --texto: #40354b;
+
+    --sombra: rgba(50, 30, 70, 0.15);
+
+}
+
+
+/* GERAL */
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--fundo);
+
+    color: var(--texto);
+
+}
+
+
+/* CABEÇALHO */
+
+.topo {
+
+    background: linear-gradient(
+        120deg,
+        var(--roxo),
+        #a77dbb
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 55px 20px;
+
+}
+
+.topo h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+
+    animation: surgir 1s ease;
+
+}
+
+.topo p {
+
+    animation: surgir 1.3s ease;
+
+}
+
+
+/* ANIMAÇÃO */
+
+@keyframes surgir {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* NAVEGAÇÃO */
+
+nav {
+
+    background-color: var(--roxo);
+
+    padding: 18px;
+
+    text-align: center;
+
+}
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    display: inline-block;
+
+    transition: 0.3s;
+
+}
+
+nav a:hover {
+
+    background-color: var(--roxo-claro);
+
+    color: var(--texto);
+
+}
+
+
+/* CONTEÚDO */
+
+main {
+
+    max-width: 1100px;
+
+    width: 90%;
+
+    margin: auto;
+
+}
+
+
+section {
+
+    margin: 35px 0;
+
+    background-color: var(--secao);
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px var(--sombra);
+
+}
+
+
+section h2 {
+
+    color: var(--roxo);
+
+    border-bottom: 3px solid var(--rosa);
+
+    padding-bottom: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+section p {
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* PERSONAGENS */
+
+.personagens {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.personagem {
+
+    background-color: var(--fundo);
+
+    border: 1px solid var(--rosa);
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+}
+
+
+.personagem:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 7px 15px var(--sombra);
+
+}
+
+
+.personagem img {
+
+    width: 120px;
+
+    height: 120px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+
+}
+
+
+.personagem h3 {
+
+    color: var(--roxo);
+
+    margin-bottom: 8px;
+
+}
+
+
+.personagem p {
+
+    font-size: 14px;
+
+}
+
+
+.categoria {
+
+    display: inline-block;
+
+    background-color: var(--rosa);
+
+    color: var(--texto);
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* VÍDEOS */
+
+.videos {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.video-card {
+
+    background-color: var(--fundo);
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+}
+
+
+.video-card h3 {
+
+    margin-bottom: 12px;
+
+    color: var(--roxo);
+
+}
+
+
+.video {
+
+    aspect-ratio: 16 / 9;
+
+}
+
+
+.video iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    border-radius: 8px;
+
+}
+
+
+/* DEPOIMENTOS */
+
+.depoimentos {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.depoimento {
+
+    background-color: var(--fundo);
+
+    border-left: 4px solid var(--roxo-claro);
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+}
+
+
+.depoimento p {
+
+    font-style: italic;
+
+}
+
+
+.depoimento cite {
+
+    color: var(--roxo);
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+/* CONTATO */
+
+.contato {
+
+    text-align: center;
+
+    background: linear-gradient(
+        120deg,
+        var(--roxo),
+        #a77dbb
+    );
+
+    color: white;
+
+}
+
+
+.contato h2 {
+
+    color: white;
+
+    border: none;
+
+}
+
+
+.botao {
+
+    display: inline-block;
+
+    background-color: white;
+
+    color: var(--roxo);
+
+    padding: 13px 28px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.botao:hover {
+
+    transform: translateY(-4px);
+
+    background-color: var(--rosa);
+
+}
+
+
+/* RODAPÉ */
+
+footer {
+
+    background-color: var(--roxo);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 750px) {
+
+    .personagens {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .depoimentos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .personagens,
+    .videos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    nav a {
+
+        margin: 4px;
+
+    }
+
+    .topo h1 {
+
+        font-size: 25px;
+
+    }
+
+}
+
